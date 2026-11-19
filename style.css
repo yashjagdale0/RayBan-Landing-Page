@@ -48,7 +48,6 @@ body {
     max-width: 1920px;
 }
 
-/* NAVIGATION */
 
 #nav {
     width: 100%;
@@ -79,7 +78,6 @@ body {
     color: #fff;
 }
 
-/* HERO SECTION */
 
 #hero {
     position: absolute;
@@ -92,17 +90,13 @@ body {
     align-items: center;
 }
 
-/* LEFT CONTENT */
 
 #heroleft {
     width: 65%;
     min-width: 0;
-
-    /* Height of each animated heading */
     --slide-height: clamp(70px, 9vw, 115px);
 }
 
-/* HEADING CONTAINER */
 
 #heroleft .elem {
     height: var(--slide-height);
@@ -110,7 +104,6 @@ body {
     position: relative;
 }
 
-/* HEADING TEXT */
 
 #heroleft .elem h1 {
     position: relative;
@@ -128,8 +121,6 @@ body {
     white-space: nowrap;
     margin: 0;
 }
-
-/* EXPLORE BUTTON */
 
 #heroleft button {
     padding: 10px 35px;
@@ -150,7 +141,6 @@ body {
     color: white;
 }
 
-/* RIGHT CONTENT */
 
 #heroright {
     display: flex;

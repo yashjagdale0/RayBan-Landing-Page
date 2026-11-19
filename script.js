@@ -1,14 +1,9 @@
 
 window.addEventListener("load", () => {
-
-    // SHERY IMAGE EFFECT
-
     try {
-
         Shery.imageEffect("#back", {
             style: 5,
             gooey: true,
-
             config: {
                 "a": { "value": 0.6, "range": [0, 30] },
                 "b": { "value": -0.98, "range": [-1, 1] },
@@ -41,94 +36,53 @@ window.addEventListener("load", () => {
                 "noise_scale": { "value": 10, "range": [0, 100] }
             }
         });
-
     } catch (error) {
-
         console.error("Shery effect error:", error);
-
     }
 
-
-    // TEXT SLIDE ANIMATION
-
     const elements = document.querySelectorAll("#heroleft .elem");
-
-    let index = 0;
-
+   let index = 0;
     const totalSlides = elements[0].querySelectorAll("h1").length;
-
     let isAnimating = false;
 
-
-    // INITIAL POSITION
-
     elements.forEach((elem) => {
-
         const headings = elem.querySelectorAll("h1");
-
         gsap.set(headings, {
             y: 0
         });
-
     });
 
-
-    // TEXT CHANGE FUNCTION
-
     function changeText() {
-
         if (isAnimating) return;
-
         isAnimating = true;
-
         index = (index + 1) % totalSlides;
-
         const animation = gsap.timeline({
-
             onComplete: () => {
                 isAnimating = false;
             }
-
         });
-
         elements.forEach((elem) => {
-
             const headings = elem.querySelectorAll("h1");
-
-            // Get actual container height
             const slideHeight = elem.clientHeight;
-
             animation.to(headings, {
-
                 y: -slideHeight * index,
-
                 duration: 0.8,
-
                 ease: "power3.inOut"
-
             }, 0);
-
         });
-
     }
 
 
-    // MAIN CLICK EVENT
 
     document.querySelector("#main").addEventListener("click", (e) => {
-
         // Ignore navigation clicks
         if (e.target.closest("#nav")) {
             return;
         }
-
         // Ignore right-side content
         if (e.target.closest("#heroright")) {
             return;
         }
-
         changeText();
-
     });
-
 });
