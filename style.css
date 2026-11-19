@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "gilory";
+    font-family: "gilory", sans-serif;
 }
 
 html,
@@ -48,6 +48,8 @@ body {
     max-width: 1920px;
 }
 
+/* NAVIGATION */
+
 #nav {
     width: 100%;
     display: flex;
@@ -77,52 +79,85 @@ body {
     color: #fff;
 }
 
+/* HERO SECTION */
+
 #hero {
     position: absolute;
     top: 55%;
     left: 0;
-    transform: translate(0, -50%);
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* LEFT CONTENT */
+
 #heroleft {
-    width: 50%;
+    width: 65%;
+    min-width: 0;
+
+    /* Height of each animated heading */
+    --slide-height: clamp(70px, 9vw, 115px);
 }
 
+/* HEADING CONTAINER */
+
 #heroleft .elem {
-    height: 9vw;
+    height: var(--slide-height);
     overflow: hidden;
     position: relative;
 }
 
+/* HEADING TEXT */
+
 #heroleft .elem h1 {
     position: relative;
-    line-height: .9;
-    font-family: "Kajiro";
+    display: block;
+
+    height: var(--slide-height);
+    line-height: var(--slide-height);
+
+    font-family: "Kajiro", sans-serif;
     color: white;
-    font-size: 11vw;
+
+    font-size: clamp(55px, 8vw, 105px);
     font-weight: 100;
+
     white-space: nowrap;
     margin: 0;
 }
 
+/* EXPLORE BUTTON */
+
 #heroleft button {
-    padding: .8vw 3vw;
-    font-size: 3vw;
-    margin-top: 2vw;
-    font-family: "Kajiro";
+    padding: 10px 35px;
+    font-size: 30px;
+    margin-top: 20px;
+
+    font-family: "Kajiro", sans-serif;
+
     pointer-events: all;
     cursor: pointer;
+
+    border: none;
+    transition: 0.3s ease;
 }
+
+#heroleft button:hover {
+    background-color: #222;
+    color: white;
+}
+
+/* RIGHT CONTENT */
 
 #heroright {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 17%;
+
+    width: 22%;
     color: white;
 }
 
@@ -130,11 +165,13 @@ body {
     text-align: right;
     font-size: 14px;
     font-weight: 200;
+    line-height: 1.5;
 }
 
 #heroright #imagediv {
     width: 100%;
     height: 170px;
+
     margin-top: 20px;
     margin-bottom: 30px;
 
@@ -142,9 +179,114 @@ body {
 
     background-size: cover;
     background-position: center;
+
     border-radius: 20%;
 }
 
 #heroright p:nth-child(3) {
     margin-bottom: 70px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1024px) {
+
+    #workingarea {
+        width: 90%;
+    }
+
+    #nleft,
+    #nright {
+        gap: 30px;
+    }
+
+    #heroleft {
+        width: 70%;
+    }
+
+    #heroright {
+        width: 25%;
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    #workingarea {
+        width: 92%;
+    }
+
+    #nav {
+        padding: 25px 0;
+    }
+
+    #nav img {
+        height: 40px;
+    }
+
+    #nleft,
+    #nright {
+        gap: 12px;
+    }
+
+    #nav a {
+        font-size: 9px;
+    }
+
+    #hero {
+        top: 48%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 35px;
+    }
+
+    #heroleft {
+        width: 100%;
+
+        --slide-height: 70px;
+    }
+
+    #heroleft .elem {
+        height: var(--slide-height);
+    }
+
+    #heroleft .elem h1 {
+        height: var(--slide-height);
+        line-height: var(--slide-height);
+
+        font-size: 55px;
+    }
+
+    #heroleft button {
+        font-size: 22px;
+
+        padding: 8px 25px;
+        margin-top: 15px;
+    }
+
+    #heroright {
+        width: 75%;
+        align-items: flex-start;
+    }
+
+    #heroright p {
+        text-align: left;
+        font-size: 11px;
+    }
+
+    #heroright #imagediv {
+        height: 110px;
+        width: 100%;
+
+        margin: 12px 0;
+    }
+
+    #heroright p:nth-child(3) {
+        margin-bottom: 15px;
+    }
+
 }
