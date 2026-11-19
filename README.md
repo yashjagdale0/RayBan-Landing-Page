@@ -1,29 +1,41 @@
-# Ray-Ban Landing Page
+# 🕶️ Ray-Ban | Interactive Landing Page
 
-A modern Ray-Ban inspired landing page built using HTML, CSS, and JavaScript.
+An immersive, modern eyewear landing page inspired by Ray-Ban, designed to deliver a premium visual experience through creative layouts, smooth animations, and interactive elements.
 
-## Features
-- Modern landing page design
-- GSAP smooth text animations
-- Shery.js gooey image effects
-- Interactive image transitions
-- Stylish hero section
+## 🔗 Live Preview
 
-## Technologies Used
+🌐 **Website:** https://yashjagdale0.github.io/RayBan-Landing-Page/
+
+## 🚀 About the Project
+
+This project showcases a creative frontend implementation featuring a stylish hero section, high-quality eyewear visuals, and engaging animation effects. The main focus is on modern UI design, visual storytelling, and smooth user interactions.
+
+## ⚡ Key Highlights
+
+- Premium-inspired website design
+- Full-screen interactive hero section
+- Smooth GSAP animations
+- Creative image transitions and visual effects
+- Modern typography and layouts
+- Interactive frontend experience
+
+## 💻 Built With
+
 - HTML5
 - CSS3
 - JavaScript
 - GSAP
-- Three.js
 - Shery.js
+- Three.js
 
-## Project Structure
-- `index.html` – Website structure
-- `style.css` – Website styling
-- `script.js` – Animations and interactions
-- `img/` – Project images and logo
+## 👨‍💻 Developer
 
-## Author
-Yash Jagdale
+**Yash Jagdale**
 
-GitHub: https://github.com/yashjagdale0
+GitHub: [@yashjagdale0](https://github.com/yashjagdale0)
+
+---
+
+*Designed and developed as a frontend development project.*
+
+⭐ If you enjoyed this project, don't forget to star the repository!
