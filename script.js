@@ -75,11 +75,9 @@ window.addEventListener("load", () => {
 
 
     document.querySelector("#main").addEventListener("click", (e) => {
-        // Ignore navigation clicks
         if (e.target.closest("#nav")) {
             return;
         }
-        // Ignore right-side content
         if (e.target.closest("#heroright")) {
             return;
         }
